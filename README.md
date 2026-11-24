@@ -4,30 +4,29 @@ A calculator project written in Java with two versions: a graphical scientific c
 
 ## Features
 
-### Scientific Calculator (GUI) – `ScientificCalculator.java`
-- Number buttons 0–9 and a decimal point
+### Scientific Calculator (GUI) - `ScientificCalculator.java`
+- Number buttons 0-9 and a decimal point
 - Basic operations: addition, subtraction, multiplication, division
-- Power (`^`), square root (`√`) and percentage (`%`)
+- Power (`^`), square root and percentage (`%`)
 - Scientific functions: `sin`, `cos`, `tan` (angles in degrees), `log` (base 10) and `ln` (natural log)
 - Clear button (`C`)
 - History panel that records every calculation
-- Divide-by-zero warning dialog
+- Clear error messages for empty input, division by zero, square root of a negative number and invalid log/ln/tan input
 
-### Console Calculator – `Calculator.java`
+### Console Calculator - `Calculator.java`
 - Menu-driven program that runs until you choose Exit
 - Addition, subtraction, multiplication, division
 - Power (x^y), square root and percentage
-- Error messages for division by zero and the square root of a negative number
+- Error messages for invalid input, division by zero and the square root of a negative number
 
 ## Project Structure
 
 ```
-Project/
+.
 ├── ScientificCalculator.java   # Swing GUI calculator
-└── Calculator.java             # Console calculator
+├── Calculator.java             # Console calculator
+└── README.md
 ```
-
-Both files use `package Project;`, so keep them inside a folder named `Project`.
 
 ## Requirements
 
@@ -35,27 +34,31 @@ Both files use `package Project;`, so keep them inside a folder named `Project`.
 
 ## How to Run
 
-Open a terminal in the folder that contains the `Project` folder.
+Open a terminal in the project folder and compile both files:
 
-**GUI calculator**
 ```bash
-javac Project/ScientificCalculator.java
-java Project.ScientificCalculator
+javac *.java
 ```
 
-**Console calculator**
+Run the GUI calculator:
+
 ```bash
-javac Project/Calculator.java
-java Project.Calculator
+java ScientificCalculator
 ```
 
-You can also open the project in Eclipse, IntelliJ IDEA or VS Code and run either class directly.
+Run the console calculator:
+
+```bash
+java Calculator
+```
+
+You can also open the folder in VS Code, Eclipse or IntelliJ IDEA and run either file directly.
 
 ## How to Use
 
-**GUI:** Type a number, press an operator (`+`, `-`, `*`, `/`, `^`), type the second number and press `=`. For `√`, `%`, `sin`, `cos`, `tan`, `log` and `ln`, type a number and press the function button. The result appears in the display and in the history panel on the right.
+**GUI:** Type a number, press an operator (`+`, `-`, `*`, `/`, `^`), type the second number and press `=`. For square root, `%`, `sin`, `cos`, `tan`, `log` and `ln`, type a number and press the function button. The result appears in the display and in the history panel on the right.
 
-**Console:** Choose an option from the menu, then enter the numbers when asked. Enter `5` to exit.
+**Console:** Choose an option from the menu, then enter the numbers when asked.
 
 | Option | Operation |
 |--------|-----------|
